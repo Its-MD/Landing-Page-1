@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+body{
+
+}
+.menu{
+    width: 20%;
+    background-color: #000000;
+    padding: 10px 0;
+    position: fixed;
+    top: 8px;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.menu-item{
+    color: #00f1fd;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.menu-item:hover{
+    background: #00f1fd;
+    color: #000000;
+    transition: 0.8s;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/rick_and_morty_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.headerWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform: translateY(-30px);
+}
+.headerInner{
+    background-color: #ffff;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 15px;
+}
+.header-title{
+    font-size: 50px;
+    color: #fb1bbc;
+    margin-bottom: 20px;
+}
+.header-button{
+    display: flex;
+    padding: 4px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000000;
+    width: fit-content;
+    font-size: 25px;
+    text-decoration: none;
+    border: 1px solid #fb1bbc;
+    transition: background 0.8s;
+}
+.header-button:hover{
+    background-color: #fb1bbc;
+}
+.container{
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.aboutWrap{
+    flex-direction: column;
+}
+.title{
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+.aboutInnerWrap{
+
+}
+.about-img{
+    float: right;
+    width: 350px;
+}
+.headerText{
+    max-width: 80%;
+    font-size: 20px;
+}
+.teamWrap{
+
+}
+.cardsWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.flipCard {
+    background-color: transparent;
+    height: 300px;
+    perspective: 1000px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 20px;
+}
+.flipCard:focus {
+    outline: 0;
+}
+.flipCard:hover .inner, .flipCard:focus .inner{
+    transform: rotateY(180deg);
+}
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+
+    width: 220px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+}
+.front {
+    background: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.back {
+    background: #000000;
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffff;
+}
+
+.team-img{
+    width: 130px;
+    height: 130px;
+    border-radius: 5px;
+}
+.team-card-header{
+    margin-top: 10px;
+}
+.role{
+    color: gray;
+    margin-bottom: 18px;
+}
+.desc{
+    display: block;
+    height: max-content;
+}
+.backDesc{
+    
+}
+.socials{
+    padding: 3.5px 50px;
+    margin-top: 20px;
+    background-color: #75f71b;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    outline: none;
+    font-size: 18px;
+}
+
+.packsWrap{
+    width: 100%;
+}
+.row {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+.col {
+    padding: 10% 15%;
+    text-align: center;
+    color: #ffff;
+    background: #000000;
+    border-radius: 10px;
+}
+.col p{
+    font-size: 22px;
+}
+.col h3{
+    font-size: 44px;
+    margin: 20px 0 40px;
+    font-weight: 600;
+}
+.col h3 span{
+    font-size: 16px;
+}
+.packs-card {
+    text-align: left;
+    margin: 20px 0;
+    list-style: none;
+}
+.packs-items {
+    margin: 15px 0;
+}
+.packs-items::before{
+    content: '·';
+    color: #e33058;
+    font-weight: 600;
+    margin-right: 8px;
+}
+.addBtn{
+    width: 100%;
+    padding: 14px 0;
+    background: transparent;
+    color: #ffff;
+    font-size: 15px;
+    border: 1px solid #e33058;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+.addBtn:hover{
+    background-color: #e33058;
+}
+.whatsapp img{
+    height: 20px;
+    margin-right: 8px;
+}
+.map{
+    background-repeat: no-repeat;
+    padding-left: 28px;
+}
+.info-item{
+    width: fit-content;
+    margin: 8px;
+}
+.mail::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mail{
+    padding-left: 28px;
+    position: relative;
+}
+.info{
+    list-style: none;
+}
